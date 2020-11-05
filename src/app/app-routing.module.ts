@@ -7,17 +7,14 @@ import { PostsComponent } from './modules/posts/posts.component';
 import { WelloperatorComponent } from './welloperator/welloperator.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent,
-    children: [
-      { path: 'regulator', component: DefaultComponent,
-        children: [
-          { path: 'regulator', component: DashboardComponent },
-          { path: 'uic', component: PostsComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'regulator', component: DefaultComponent,
+      children: [
+        { path: 'regulator', component: DashboardComponent },
+        { path: 'uic', component: PostsComponent }
         ]
-      },
-      { path: 'welloperator', component: WelloperatorComponent }
-    ]
-  }
+   },
+  { path: 'welloperator', component: WelloperatorComponent }
 ];
 
 @NgModule({
