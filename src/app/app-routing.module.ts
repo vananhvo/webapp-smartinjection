@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
+import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostsComponent } from './modules/posts/posts.component';
+import { WelloperatorComponent } from './welloperator/welloperator.component';
 
 const routes: Routes = [
-  { path: '', component: DefaultComponent,
+  { path: '', component: LoginComponent,
     children: [
-      { path: '', component: DashboardComponent },
-      { path: 'posts', component: PostsComponent }
+      { path: 'regulator', component: DefaultComponent,
+        children: [
+          { path: 'regulator', component: DashboardComponent },
+          { path: 'uic', component: PostsComponent }
+        ]
+      },
+      { path: 'welloperator', component: WelloperatorComponent }
     ]
   }
 ];
