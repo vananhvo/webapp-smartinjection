@@ -47,7 +47,6 @@ import { StepperComponent } from './widgets/stepper/stepper.component';
     FooterComponent,
     SidebarComponent,
     CardComponent,
-    TableComponent,
-  ]
+    TableComponent  ]
 })
 export class SharedModule { }

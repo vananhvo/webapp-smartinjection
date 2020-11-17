@@ -13,13 +13,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { DashboardService } from 'src/app/modules/dashboard.service';
 import { MatIconModule } from '@angular/material/icon';
-
+import { WelloperatorComponent } from 'src/app/welloperator/welloperator.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
     PostsComponent,
+    WelloperatorComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [
     DashboardService,

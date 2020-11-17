@@ -1,0 +1,60 @@
+<!-- <div style="padding: 0.5em;">
+    <div class="card">
+        <h1>Well</h1>
+        <form>
+            <label>
+                Full Well Name
+            </label>
+            <br>
+            <input type="text" id="wellName" placeholder="Tiger Lily 20" name=wellName>
+            
+            <br>
+
+            <label>
+                Lease
+            </label>
+            <br>
+            <input>
+        </form>
+    </div>
+</div> -->
+
+<div style="padding: 1.0em 1.5em 1.0em 1.5em">
+    <form>
+        <mat-card>
+            <mat-card-title>
+                Create Well
+            </mat-card-title>
+            
+            <label>Full Well Name</label>
+            <br>
+            <input type="text" id="wellName" name="wellName">
+
+            <br><br>
+
+            <label>Lease</label>
+            <br>
+            <input type="text" id="lease" name="lease">
+
+            <br><br>
+
+            <label>Well Type</label> 
+            <br>
+            <select fullWidth name="wellType" id="wellType">
+                <option value="I">I - Non-Hazardous Industrial Disposal Well </option>
+                <option value="M">M - Non-Hazardous Municipal Disposal Well </option>
+                <option value="R">R - Radioactive Waste Disposal Well </option>
+                <option value="X">X - Other Class I Wells (not included) </option>
+            </select> 
+            
+            <br><br>
+
+            <label>Well Type</label> 
+            <br>
+            <select fullWidth name="locationType" id="wellType">
+                <option value="none">-</option>
+                <option value="NAD27">NAD27</option>
+            </select> <br>
+        </mat-card>
+    </form>
+</div>
