@@ -2,4 +2,23 @@
     border-style: solid;
     border-width: 0.1em;
     padding: 0.5em;
+    // min-width: 800px;
 }
+
+.formFormat {
+    padding: 1.5em;
+}
+
+
+mat-form-field {
+    width: 50%;
+}
+
+.cardInner {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bolder;
+  }

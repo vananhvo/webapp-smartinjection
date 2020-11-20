@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-welloperator',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welloperator.component.scss']
 })
 export class WelloperatorComponent implements OnInit {
+  // @ViewChild(WoSidebarComponent) wosidebar:WoSidebarComponent;
 
   sideBarOpen = true;
 

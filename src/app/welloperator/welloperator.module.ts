@@ -15,6 +15,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatPseudoCheckboxModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,14 @@ import { MatTableModule } from '@angular/material/table';
     MatSidenavModule,
     MatDividerModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatPseudoCheckboxModule,
+    MatCheckboxModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatListModule,
+    MatSortModule
   ]
 })
 export class WelloperatorModule { }
