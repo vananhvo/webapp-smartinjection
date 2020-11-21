@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
+import {MatSort} from '@angular/material/sort';
+
 
 export interface CreatedWell {
   wellName: string;
@@ -28,7 +30,7 @@ const ELEMENT_DATA: CreatedWell[] = [
   templateUrl: './propose-wells.component.html',
   styleUrls: ['./propose-wells.component.scss']
 })
-export class ProposeWellsComponent implements OnInit {
+export class ProposeWellsComponent implements AfterViewInit {
 
   displayedColumns: string[] = ['select', 'wellName', 'lease', 'wellType', 'locationType', 'location'];
   dataSource = new MatTableDataSource<CreatedWell>(ELEMENT_DATA);
@@ -48,9 +50,12 @@ export class ProposeWellsComponent implements OnInit {
         this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  @ViewChild(MatSort) sort: MatSort;
+  
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
   }
+
+  constructor() { }
 
 }
