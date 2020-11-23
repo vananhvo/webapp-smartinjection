@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
-import { LoginComponent } from './login/login.component';
 import { WelloperatorComponent } from './welloperator/welloperator.component';
+import { FormsModule } from '@angular/forms';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     WelloperatorComponent
 
   ],
@@ -20,7 +20,9 @@ import { WelloperatorComponent } from './welloperator/welloperator.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule
+    DefaultModule,
+    FormsModule,
+    LoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
