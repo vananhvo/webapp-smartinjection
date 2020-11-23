@@ -8,11 +8,12 @@ import { WelloperatorComponent } from './welloperator/welloperator.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'regulator', component: DefaultComponent,
+  { path: '', component: DefaultComponent,
       children: [
-        { path: 'regulator', component: DashboardComponent },
-        { path: 'uic', component: PostsComponent }
-        ]
+        { path: 'regulator', component: DashboardComponent ,
+          children: [ { path: 'uic', component: PostsComponent }
+        ]}
+      ]
    },
   { path: 'welloperator', component: WelloperatorComponent }
 ];
