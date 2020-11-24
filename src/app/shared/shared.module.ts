@@ -13,7 +13,6 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './widgets/card/card.component';
 import { MatCardModule } from '@angular/material/card';
-import { TableComponent } from './widgets/table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { StepperComponent } from './widgets/stepper/stepper.component';
@@ -25,7 +24,6 @@ import { StepperComponent } from './widgets/stepper/stepper.component';
     FooterComponent,
     SidebarComponent,
     CardComponent,
-    TableComponent,
     StepperComponent,
   ],
   imports: [
@@ -47,7 +45,6 @@ import { StepperComponent } from './widgets/stepper/stepper.component';
     FooterComponent,
     SidebarComponent,
     CardComponent,
-    TableComponent,
   ]
 })
 export class SharedModule { }
