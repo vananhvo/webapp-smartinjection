@@ -27,9 +27,10 @@ export class CreateWellComponent implements OnInit{
 
   submitWell(wellData: NgForm) {
     console.log("Hello Create Well Form Has Been Submitted!");
-    console.log(wellData.value); //return 
+    console.log(wellData.value); //return data in JSON object
 
     this.wellOperatorService.createWell(wellData.value);
+
   }
 
   checkVal(x) {
