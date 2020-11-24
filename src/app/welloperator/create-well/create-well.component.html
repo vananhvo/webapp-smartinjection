@@ -76,7 +76,7 @@
 <div class="cardOuter">
 <mat-card>
     <div class="cardInner">
-    <form class="formFormat" (ngSubmit)="createWell()">
+    <form class="formFormat" #wellData="ngForm" (ngSubmit)="submitWell(wellData)">
     <mat-card-title>Well 1</mat-card-title>
     <mat-form-field>
         <mat-label>Full Well Name</mat-label>
@@ -87,14 +87,14 @@
 
     <mat-form-field>
         <mat-label>Lease</mat-label>
-        <input matInput name="lease">
+        <input matInput name="lease" ngModel>
     </mat-form-field>
 
     <br>
 
     <mat-form-field>
         <mat-label>Well Type</mat-label>
-        <select name="wellType" matNativeControl required>
+        <select name="wellType" matNativeControl required ngModel>
             <option value="I">I - Non-Hazardous Industrial Disposal Well </option>
             <option value="M">M - Non-Hazardous Municipal Disposal Well </option>
             <option value="R">R - Radioactive Waste Disposal Well </option>
@@ -110,7 +110,8 @@
         [hidden]="locationShow" 
         name="locationType" 
         matNativeControl 
-        required>
+        required
+        ngModel>
             <option value="NAD27">NAD27</option>
           </select>
     </mat-form-field>
@@ -124,17 +125,17 @@
             
             <mat-form-field>
                 <mat-label>X</mat-label>
-                <input matInput name="xLoc">
+                <input matInput name="xLoc" ngModel>
             </mat-form-field>
             <br>
             <mat-form-field>
                 <mat-label>Y</mat-label>
-                <input matInput name="yLoc">
+                <input matInput name="yLoc" ngModel>
             </mat-form-field>
             <br>
             <mat-form-field>
                 <mat-label>Z</mat-label>
-                <input matInput name="zLoc">
+                <input matInput name="zLoc" ngModel>
             </mat-form-field>
         </fieldset>
     </div>

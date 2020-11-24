@@ -21,6 +21,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { MatSortModule } from '@angular/material/sort';
     FormsModule,
     MatButtonModule,
     MatListModule,
-    MatSortModule
+    MatSortModule,
+    HttpClientModule
   ]
 })
 export class WelloperatorModule { }

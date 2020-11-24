@@ -1,9 +1,9 @@
+import { NgForOf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
-
+import { WelloperatorService } from '../welloperator.service';
 
 
 @Component({
@@ -12,27 +12,24 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./create-well.component.scss']
 })
 export class CreateWellComponent implements OnInit{
-  // createWellForm = this.fb.group({
-  //   wellName: ['', Validators.required],
-  //   lease: [''],
-  //   wellType: ['']
-
-  // });
-// private fb: FormBuilder
 
   ComponentName = "Create Well";
   locationShow = true;
   
   constructor(
     private route:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private wellOperatorService : WelloperatorService
   ){}
 
   ngOnInit(): void {
   }
 
-  createWell() {
+  submitWell(wellData: NgForm) {
     console.log("Hello Create Well Form Has Been Submitted!");
+    console.log(wellData.value); //return 
+
+    this.wellOperatorService.createWell(wellData.value);
   }
 
   checkVal(x) {
