@@ -8,6 +8,60 @@
   </mat-drawer>
 
   <mat-drawer-content>
+    <div>
+      <h6>Welcome to Smart Injection!</h6>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stat-cards">
+      <mat-card fxFlex="30">
+        <app-widget-card>
+        </app-widget-card>
+      </mat-card>
+      <mat-card fxFlex="30">
+        <app-widget-card></app-widget-card>
+      </mat-card>
+      <mat-card fxFlex="30">
+        <app-widget-card></app-widget-card>
+      </mat-card>
+    </div>
+
+    <br>
+
+    <mat-divider></mat-divider>
+    <div align='center'><h1>Well Viewer CRUD with Angular</h1></div>
+
+    <div>
+      <table class="table" style="width: 80%">
+        <tr>
+          <th>Well Name</th>
+          <th>Status</th>
+          <th>Lease</th>
+        </tr>
+        <tr *ngFor="let well of wells">
+          <td>
+            {{well.state.data.wellName}}
+          </td>
+          <td>
+            {{well.state.data.status}}
+          </td>
+          <td>
+            {{well.state.data.lease}}
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+    <!--  <p>-->
+    <!--    <button (click)="addBook()"> Add Book</button>-->
+    <!--  </p>-->
+    </div>
+<router-outlet></router-outlet>
+
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+      <div fxFlex="100">
+      </div>
+    </div>
     <router-outlet></router-outlet>
 
   </mat-drawer-content>

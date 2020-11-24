@@ -6,15 +6,15 @@ import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class DashboardService {
+export class DefaultService {
 
-  private url = 'http://localhost:10050/regulator';
+  private url = 'http://localhost:10050/wells';
 
   constructor(private http: HttpClient) {
   }
 
-  getUICProjectTable() {
-    console.log('in getUICProjectTable');
+  getWells() {
+    console.log('in getWells');
     return this.http.get(this.url);
   }
 
