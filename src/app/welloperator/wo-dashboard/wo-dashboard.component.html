@@ -16,25 +16,25 @@
       <!-- ID Column -->
       <ng-container matColumnDef="wellName">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Well Name </th>
-        <td mat-cell *matCellDef="let row"> {{row.wellName}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.state.data.wellName}} </td>
       </ng-container>
   
       <!-- Progress Column -->
       <ng-container matColumnDef="proposalStatus">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Proposal Status </th>
-        <td mat-cell *matCellDef="let row"> {{row.proposalStatus}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.state.data.status}} </td>
       </ng-container>
   
       <!-- Name Column -->
       <ng-container matColumnDef="lease">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Lease </th>
-        <td mat-cell *matCellDef="let row"> {{row.lease}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.state.data.lease}} </td>
       </ng-container>
   
       <!-- Color Column -->
       <ng-container matColumnDef="api">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> API Number </th>
-        <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.api}} </td>
+        <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.state.data.API}} </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>

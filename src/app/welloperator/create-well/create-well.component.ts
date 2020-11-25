@@ -49,6 +49,7 @@ export class CreateWellComponent implements OnInit{
       this.result = value;
     });
     console.log(this.result);
+    wellData.resetForm();
   }
 
   checkVal(x) {
