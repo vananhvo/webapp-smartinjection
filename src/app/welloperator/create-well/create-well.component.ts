@@ -29,7 +29,6 @@ export class CreateWellComponent implements OnInit{
 
   submitWell(wellData: NgForm) {
     console.log("Hello Create Well Form Has Been Submitted!");
-<<<<<<< HEAD
     console.log(wellData.value); //return
     let selectedFiles = wellData.value.attachment;
     console.log(selectedFiles);
@@ -51,12 +50,6 @@ export class CreateWellComponent implements OnInit{
     });
     console.log(this.result);
     wellData.resetForm();
-=======
-    console.log(wellData.value); //return data in JSON object
-
-    this.wellOperatorService.createWell(wellData.value);
-
->>>>>>> 73a4485c509533c43d9253a7f4fb34829661f21c
   }
 
   checkVal(x) {
