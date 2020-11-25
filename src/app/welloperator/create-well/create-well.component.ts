@@ -15,6 +15,8 @@ export class CreateWellComponent implements OnInit{
 
   ComponentName = "Create Well";
   locationShow = true;
+  result;
+  fileToUpload: File;
   
   constructor(
     private route:ActivatedRoute,
@@ -27,9 +29,26 @@ export class CreateWellComponent implements OnInit{
 
   submitWell(wellData: NgForm) {
     console.log("Hello Create Well Form Has Been Submitted!");
-    console.log(wellData.value); //return 
+    console.log(wellData.value); //return
+    let selectedFiles = wellData.value.attachment;
+    console.log(selectedFiles);
+    this.fileToUpload = selectedFiles.files[0];
+    console.log(selectedFiles.files[0]);
+    let formData = new FormData();
+    formData.append('wellName', wellData.value.wellName);
+    formData.append('wellType', wellData.value.wellType);
+    formData.append('lease', wellData.value.lease);
+    formData.append('xLoc', wellData.value.xLoc);
+    formData.append('yLoc', wellData.value.yLoc);
+    formData.append('zLoc', wellData.value.zLoc);
+    formData.append('locationType', wellData.value.locationType);
+    formData.append('attachment', this.fileToUpload);
+    console.log(formData);
 
-    this.wellOperatorService.createWell(wellData.value);
+    this.wellOperatorService.createWell(formData).subscribe(value => {
+      this.result = value;
+    });
+    console.log(this.result);
   }
 
   checkVal(x) {
@@ -44,6 +63,14 @@ export class CreateWellComponent implements OnInit{
     // appending the values into the URL 
     // https://stackoverflow.com/questions/46213737/angular-append-query-parameters-to-url
     
+  }
+
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+  }
+
+  uploadFile() {
+    //
   }
 
 }

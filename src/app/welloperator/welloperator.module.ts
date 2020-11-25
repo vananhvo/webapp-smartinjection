@@ -22,6 +22,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
+//import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
+
 
 
 @NgModule({
@@ -51,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatListModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialFileInputModule
   ]
 })
 export class WelloperatorModule { }

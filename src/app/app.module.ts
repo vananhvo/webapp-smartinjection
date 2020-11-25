@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { LoginComponent } from './login/login.component';
 import { WelloperatorModule } from './welloperator/welloperator.module';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { WelloperatorModule } from './welloperator/welloperator.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     DefaultModule,
-    WelloperatorModule
+    WelloperatorModule,
+    NgxMatFileInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
