@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {MyWellsService} from './my-wells.service';
 
 
 @Component({
@@ -7,16 +9,30 @@ import {MatTableDataSource} from '@angular/material/table';
   templateUrl: './my-wells.component.html',
   styleUrls: ['./my-wells.component.scss'],
 })
-export class MyWellsComponent{
+
+export class MyWellsComponent implements AfterViewInit{
   displayedColumns: string[] = [
     'wellName',
     'proposalStatus', 
     'lease', 
-    'api', 
-    'uicProjectNo',
-    'location'
+    'api',
   ];
-  dataSource = new MatTableDataSource(WELL_DATA);
+  dataSource;
+
+  @ViewChild(MatSort) sort: MatSort;
+
+  constructor(private myWellsService: MyWellsService){}
+
+  ngOnInit(): void {
+    this.myWellsService.getWells().subscribe(value => {
+      console.log(value);
+      this.dataSource = new MatTableDataSource(<any> value);
+    })
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -24,6 +40,7 @@ export class MyWellsComponent{
   }
   
 }
+
 export interface myWells {
   wellName: string;
   proposalStatus: string;
