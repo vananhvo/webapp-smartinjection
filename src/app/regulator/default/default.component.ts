@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DefaultService } from 'src/app/default.service';
 
 @Component({
   selector: 'app-default',
@@ -9,16 +8,11 @@ import { DefaultService } from 'src/app/default.service';
 
 export class DefaultComponent implements OnInit {
 
-  wells;
   sideBarOpen = true;
 
-  constructor(private defaultService: DefaultService) { }
+  constructor() { }
 
   ngOnInit() {
-    console.log('In init');
-    this.defaultService.getWells().subscribe(value => {
-      this.wells = value;
-    })
   }
 
   sideBarToggler() {

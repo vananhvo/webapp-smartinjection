@@ -1,0 +1,28 @@
+
+<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+
+<mat-drawer-container>
+
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+
+  <mat-drawer-content>
+  <div>
+      <h6>Welcome to Smart Injection!</h6>
+  </div>
+
+  <br>
+
+  <mat-divider></mat-divider>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+      <div fxFlex="100">
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>
