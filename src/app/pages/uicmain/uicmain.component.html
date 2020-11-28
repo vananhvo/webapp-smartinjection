@@ -1,0 +1,25 @@
+<router-outlet></router-outlet>
+<mat-list>Pending UIC Projects
+<br>
+<br>
+  <a mat-button routerLink="/reg/uicreview" target="_blank">Project A</a>
+  <br>
+  <a mat-button routerLink="/reg/uicreview" target="_blank">Project B</a>
+  <br>
+  <a mat-button routerLink="/reg/uicreview" target="_blank">Project C</a>
+</mat-list>
+<!--
+<mat-selection-list #project [multiple]="false">List of Pending Projects
+  <br>
+  <br>
+  <mat-list-option *ngFor="let project of listOfPendingProjects" [value]="project">
+    {{project}}
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="reg/uic/uicreview"></a>
+  </mat-list-option>
+</mat-selection-list>
+-->
+<!--
+<p>
+  Option selected: {{project.selectedOptions.selected[0]?.value}}
+</p>
+-->

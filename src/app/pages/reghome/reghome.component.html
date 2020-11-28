@@ -1,0 +1,25 @@
+<div align='center'><h1>UIC Projects Lookup Table</h1></div>
+
+  <div>
+    <table class="table" style="width: 80%">
+      <tr>
+        <th>Project ID</th>
+        <th>Project Name</th>
+        <th>Lease</th>
+      </tr>
+      <tr *ngFor="let well of wells">
+        <td>
+          {{well.state.data.wellName}}
+        </td>
+        <td>
+          {{well.state.data.status}}
+        </td>
+        <td>
+          {{well.state.data.lease}}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+<router-outlet></router-outlet>
+
