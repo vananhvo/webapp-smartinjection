@@ -1,1 +1,24 @@
-<p>welloperator works!</p>
+<!-- <p>welloperator works!</p> -->
+<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <!-- <nav>
+            <a routerLink="wo-dashboard" routerLinkActive="active">Dashboard</a> <br>
+            <a routerLink="create-well" routerLinkActive="active">Create Well</a> <br>
+            <a routerLink="my-wells" routerLinkActive="active">My Wells</a> <br>
+            <a routerLink="propose-wells" routerLinkActive="active">Propose Wells</a>
+        
+        </nav> -->
+
+        <app-wo-sidebar></app-wo-sidebar>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+<app-footer></app-footer>
+
+

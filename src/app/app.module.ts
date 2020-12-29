@@ -7,7 +7,8 @@ import { DefaultModule } from './regulator/default/default.module';
 import { DefaultService } from 'src/app/default.service';
 import { FormsModule } from '@angular/forms';
 import { LoginModule } from './login/login.module';
-
+import { WelloperatorModule } from './welloperator/welloperator.module';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import { LoginModule } from './login/login.module';
     DefaultModule,
     FormsModule,
     LoginModule,
+    WelloperatorModule,
+    MaterialFileInputModule
   ],
   providers: [
     DefaultService
