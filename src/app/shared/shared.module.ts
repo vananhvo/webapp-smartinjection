@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { StepperComponent } from './widgets/stepper/stepper.component';
+import { WoSidebarComponent } from './components/wo-sidebar/wo-sidebar.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { StepperComponent } from './widgets/stepper/stepper.component';
     SidebarComponent,
     CardComponent,
     StepperComponent,
+    WoSidebarComponent,
   ],
   imports: [
     CommonModule,
@@ -45,6 +47,7 @@ import { StepperComponent } from './widgets/stepper/stepper.component';
     FooterComponent,
     SidebarComponent,
     CardComponent,
+    WoSidebarComponent
   ]
 })
 export class SharedModule { }

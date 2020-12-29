@@ -1,0 +1,156 @@
+<!-- <div style="padding: 0.5em;">
+    <div class="card">
+        <h1>Well</h1>
+        <form>
+            <label>
+                Full Well Name
+            </label>
+            <br>
+            <input type="text" id="wellName" placeholder="Tiger Lily 20" name=wellName>
+            
+            <br>
+
+            <label>
+                Lease
+            </label>
+            <br>
+            <input>
+        </form>
+    </div>
+</div> -->
+<!-- 
+<div style="padding: 1.0em 1.5em 1.0em 1.5em">
+    <form>
+        <mat-card>
+            <mat-card-title>
+                Create Well
+            </mat-card-title>
+            
+            <label>Full Well Name</label>
+            <br>
+            <input type="text" id="wellName" name="wellName">
+
+            <br><br>
+
+            <label>Lease</label>
+            <br>
+            <input type="text" id="lease" name="lease">
+
+            <br><br>
+
+            <label>Well Type</label> 
+            <br>
+            <select fullWidth name="wellType" id="wellType">
+                <option value="I">I - Non-Hazardous Industrial Disposal Well </option>
+                <option value="M">M - Non-Hazardous Municipal Disposal Well </option>
+                <option value="R">R - Radioactive Waste Disposal Well </option>
+                <option value="X">X - Other Class I Wells (not included) </option>
+            </select> 
+            
+            <br><br>
+
+            <label>Well Type</label> 
+            <br>
+            <select fullWidth name="locationType" id="wellType">
+                <option value="none">-</option>
+                <option value="NAD27">NAD27</option>
+            </select> 
+            
+            <br><br>
+
+            <label>Location</label>
+            <br>
+            <label>X  </label>
+            <input type="text" name="xLoc" id="xLoc">
+            <br>
+            <label>Y  </label>
+            <input type="text" name="yLoc" id="yLoc">
+            <br>
+            <label>Z  </label>
+            <input type="text" name="zLoc" id="zLoc">
+        </mat-card>
+    </form>
+</div> -->
+
+<h1>{{ComponentName}}</h1>
+<div class="cardOuter">
+<mat-card>
+    <div class="cardInner">
+    <form class="formFormat" #wellData="ngForm" (ngSubmit)="submitWell(wellData)">
+    <mat-card-title>Well 1</mat-card-title>
+    <mat-form-field>
+        <mat-label>Full Well Name</mat-label>
+        <input matInput ngModel name="wellName" #wellName="ngModel" (change)="checkVal(wellName)">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Lease</mat-label>
+        <input matInput name="lease" ngModel>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Well Type</mat-label>
+        <select name="wellType" matNativeControl required ngModel>
+            <option value="I">I - Non-Hazardous Industrial Disposal Well </option>
+            <option value="M">M - Non-Hazardous Municipal Disposal Well </option>
+            <option value="R">R - Radioactive Waste Disposal Well </option>
+            <option value="X">X - Other Class I Wells (not included) </option>
+          </select>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Location Type</mat-label>
+        <select 
+        [hidden]="locationShow" 
+        name="locationType" 
+        matNativeControl 
+        required
+        ngModel>
+            <option value="NAD27">NAD27</option>
+          </select>
+    </mat-form-field>
+    
+    <br><br>
+
+    <div *ngIf="locationShow">
+        <fieldset>
+            <label>Location</label>
+            <br>
+            
+            <mat-form-field>
+                <mat-label>X</mat-label>
+                <input matInput name="xLoc" ngModel>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>Y</mat-label>
+                <input matInput name="yLoc" ngModel>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>Z</mat-label>
+                <input matInput name="zLoc" ngModel>
+            </mat-form-field>
+        </fieldset>
+    </div>
+        <br>
+
+        <mat-form-field>
+            <ngx-mat-file-input placeholder='Attachment' name='attachment' ngModel #attachment='ngModel'></ngx-mat-file-input>
+            <mat-icon matSuffix>folder</mat-icon>
+        </mat-form-field>
+
+        <br>
+        
+        <button mat-stroked-button type="submit">Submit</button>
+    </form>
+    </div>
+</mat-card>
+</div>
+   

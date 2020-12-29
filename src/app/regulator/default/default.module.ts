@@ -22,6 +22,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
+import { WelloperatorComponent } from 'src/app/welloperator/welloperator.component';
 
 
 
@@ -32,6 +33,7 @@ import { MatButtonModule } from '@angular/material/button';
     ReghomeComponent,
     UicmainComponent,
     UicprojectsComponent,
+    WelloperatorComponent
   ],
   imports: [
     CommonModule,
