@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 //import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { DefaultModule } from '../regulator/default/default.module';
+import { AddRemoveProjectWellsComponent } from './add-remove-project-wells/add-remove-project-wells.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -33,7 +34,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     WoDashboardComponent, 
     CreateWellComponent, 
     MyWellsComponent, 
-    ProposeWellsComponent, 
+    ProposeWellsComponent, AddRemoveProjectWellsComponent, 
   ],
   imports: [
     CommonModule,
