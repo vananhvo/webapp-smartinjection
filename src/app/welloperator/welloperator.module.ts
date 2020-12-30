@@ -14,7 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule} from '@angular/material/checkbox';
 import { MatPseudoCheckboxModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { DefaultModule } from '../regulator/default/default.module';
 import { AddRemoveProjectWellsComponent } from './add-remove-project-wells/add-remove-project-wells.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -56,7 +57,8 @@ import { AddRemoveProjectWellsComponent } from './add-remove-project-wells/add-r
     MatListModule,
     MatSortModule,
     HttpClientModule,
-    MaterialFileInputModule
+    MaterialFileInputModule,
+    FlexLayoutModule,
   ]
 })
 export class WelloperatorModule { }

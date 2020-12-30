@@ -5,7 +5,74 @@
 
 <h1>{{ pageTitle }}</h1>
 
-<mat-form-field>
+<div fxLayout="row" fxLayoutAlign="space-between-center" fxLayoutGap="10px">
+    <mat-card class="drafted-projects-card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>edit</mat-icon>
+        <mat-card-title>Drafted Projects</mat-card-title>
+        <mat-card-subtitle>You have unsubmitted project(s).</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Oldest Project: Shiba Inu</p>
+        <p>Created on: 12/12/20</p>
+        <p>Created by: Joe Doe</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent">EDIT OLDEST</button>
+        <button mat-raised-button color="primary">ALL DRAFTED</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="well-card">
+      <mat-card-header>
+      <mat-icon mat-card-avatar>library_add</mat-icon>
+      <mat-card-title>Projects Management</mat-card-title>
+      <mat-card-subtitle>Choose an option.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Create a new project to add wells.</p>
+      <button mat-raised-button color="primary">CREATE NEW PROJECT</button>
+      <p>View pending projects</p>
+      <button mat-raised-button color="accent">ALL PENDING PROJECTS</button>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+    <mat-card class="my-wells-card">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>star</mat-icon>
+        <mat-card-title>My Wells</mat-card-title>
+        <mat-card-subtitle>There are 30 new wells recently added.</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Newest Well: Weiss</p>
+        <p>Part of Project: Corgi</p>
+        <p>Created by: Alex Smith</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent">VIEW NEWEST</button>
+        <button mat-raised-button color="primary">ALL WELLS</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="well-card">
+      <mat-card-header>
+      <mat-icon mat-card-avatar>add_circle</mat-icon>
+      <mat-card-title>Wells Management</mat-card-title>
+      <mat-card-subtitle>Choose an option.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Create a new well to add into a project</p>
+      <button mat-raised-button color="primary">CREATE WELL</button>
+      <p>Add/Remove Wells in Drafted Projects</p>
+      <button mat-raised-button color="accent">PROPOSE WELLS</button>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<br>
+<h2>My UIC Projects</h2>
+  <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input name="filter">
   </mat-form-field>
