@@ -8,7 +8,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class WelloperatorComponent implements OnInit {
   // @ViewChild(WoSidebarComponent) wosidebar:WoSidebarComponent;
 
-  sideBarOpen = true;
+  sideBarOpen = false;
 
   constructor() { }
 
