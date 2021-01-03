@@ -26,6 +26,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { DefaultModule } from '../regulator/default/default.module';
 import { AddRemoveProjectWellsComponent } from './add-remove-project-wells/add-remove-project-wells.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ProjectConfirmComponent } from './project-confirm/project-confirm.component';
 
 
 
@@ -34,7 +35,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     WoDashboardComponent, 
     CreateWellComponent, 
     MyWellsComponent, 
-    ProposeWellsComponent, AddRemoveProjectWellsComponent, 
+    ProposeWellsComponent, AddRemoveProjectWellsComponent, ProjectConfirmComponent, 
   ],
   imports: [
     CommonModule,
