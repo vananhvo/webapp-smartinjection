@@ -1,12 +1,21 @@
+<!-- Things that still need to be fixed and added 
+    [] "Wells in Project" Expandable 
+    [] "Wells in Project" table responsive with mat-card
+    [] Checkboxes batch up the selected wells + add to "Well in Project" table
+    [] Filtering and Sorting with Checkbox Tables
+        Possible solution: 
+        https://stackoverflow.com/questions/53631391/angular-6-filter-table-with-checkboxes/53631579
+    
+-->
 <div fxLayout id="overall">
 	<div fxLayout="column">
 		<div class="item">
             <mat-card class="project-info-card">
-                <mat-card-header>
-                    <mat-icon mat-card-avatar>info</mat-icon>
-                  <mat-card-title>Landcaster Holdings</mat-card-title>
-                  <mat-card-subtitle>Project Information</mat-card-subtitle>
-                </mat-card-header>
+              <mat-card-header>
+                <mat-icon mat-card-avatar>info</mat-icon>
+                <mat-card-title>Landcaster Holdings</mat-card-title>
+                <mat-card-subtitle>Project Information</mat-card-subtitle>
+              </mat-card-header>
                 
                 <mat-card-content>
                     <p>Owner: {{ owner }} </p>
