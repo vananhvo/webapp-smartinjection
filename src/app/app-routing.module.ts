@@ -11,6 +11,7 @@ import { ProposeWellsComponent } from './welloperator/propose-wells/propose-well
 import { WoDashboardComponent } from './welloperator/wo-dashboard/wo-dashboard.component';
 import { CreateWellComponent } from './welloperator/create-well/create-well.component';
 import { AddRemoveProjectWellsComponent } from './welloperator/add-remove-project-wells/add-remove-project-wells.component';
+import { ProjectConfirmComponent } from './welloperator/project-confirm/project-confirm.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -28,7 +29,8 @@ const routes: Routes = [
         { path: 'create-well', component: CreateWellComponent },
         { path: 'my-wells', component: MyWellsComponent },
         { path: 'propose-wells', component: ProposeWellsComponent },
-        { path: 'edit-project', component: AddRemoveProjectWellsComponent }
+        { path: 'edit-project', component: AddRemoveProjectWellsComponent },
+        { path: 'project-confirm', component: ProjectConfirmComponent }
       ]
   }];
 
