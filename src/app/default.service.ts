@@ -7,9 +7,11 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DefaultService {
+  private headers = new HttpHeaders().set('Accept', 'text/*');
 
   private url = 'http://localhost:10050/wells';
-  private project = 'http://localhost:10050/uic';
+  private project = 'http://localhost:10050/projects';
+  private createProjectURL = 'http://localhost:10050/createProjectFlow'
 
   constructor(private http: HttpClient) {
   }
@@ -23,5 +25,11 @@ export class DefaultService {
     console.log('in getProjects');
     return this.http.get(this.project);
   }
+
+  createProject(formData: FormData) {
+    return this.http.post(this.createProjectURL, formData, {headers: this.headers, responseType: 'text'});
+
+  }
+
 
 }

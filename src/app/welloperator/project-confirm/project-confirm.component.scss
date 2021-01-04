@@ -1,6 +1,9 @@
 mat-icon.mat-card-avatar {
     font-size: 2.3em;
 }
+
+// Table 
+
 table {
     width: 100%;
   }
@@ -54,4 +57,10 @@ table {
 .example-button-row a {
   margin-right: 8px;
 }
-  
+
+// Item
+
+.item.bttn {
+    min-width: 4.1em;
+    width: 9.4em;
+}
