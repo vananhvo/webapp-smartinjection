@@ -12,6 +12,7 @@ import { WoDashboardComponent } from './welloperator/wo-dashboard/wo-dashboard.c
 import { CreateWellComponent } from './welloperator/create-well/create-well.component';
 import { AddRemoveProjectWellsComponent } from './welloperator/add-remove-project-wells/add-remove-project-wells.component';
 import { ProjectConfirmComponent } from './welloperator/project-confirm/project-confirm.component';
+import { NewProjectComponent } from './welloperator/new-project/new-project.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -30,7 +31,8 @@ const routes: Routes = [
         { path: 'my-wells', component: MyWellsComponent },
         { path: 'propose-wells', component: ProposeWellsComponent },
         { path: 'edit-project', component: AddRemoveProjectWellsComponent },
-        { path: 'project-confirm', component: ProjectConfirmComponent }
+        { path: 'project-confirm', component: ProjectConfirmComponent },
+        { path: 'new-project', component: NewProjectComponent }
       ]
   }];
 

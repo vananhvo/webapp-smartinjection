@@ -27,6 +27,9 @@ import { DefaultModule } from '../regulator/default/default.module';
 import { AddRemoveProjectWellsComponent } from './add-remove-project-wells/add-remove-project-wells.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjectConfirmComponent } from './project-confirm/project-confirm.component';
+import { NewProjectComponent } from './new-project/new-project.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 
@@ -35,7 +38,7 @@ import { ProjectConfirmComponent } from './project-confirm/project-confirm.compo
     WoDashboardComponent, 
     CreateWellComponent, 
     MyWellsComponent, 
-    ProposeWellsComponent, AddRemoveProjectWellsComponent, ProjectConfirmComponent, 
+    ProposeWellsComponent, AddRemoveProjectWellsComponent, ProjectConfirmComponent, NewProjectComponent, 
   ],
   imports: [
     CommonModule,
@@ -60,6 +63,9 @@ import { ProjectConfirmComponent } from './project-confirm/project-confirm.compo
     HttpClientModule,
     MaterialFileInputModule,
     FlexLayoutModule,
+    MatStepperModule,
+    MatListModule,
+    MatGridListModule
   ]
 })
 export class WelloperatorModule { }
