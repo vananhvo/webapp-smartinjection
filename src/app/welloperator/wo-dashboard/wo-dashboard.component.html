@@ -46,22 +46,23 @@
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
   
-      
+      <!-- Project Name -->
       <ng-container matColumnDef="projectName">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Name </th>
         <td mat-cell *matCellDef="let row">
-          <a href="/welloperator/new-project">
+          <a href="/welloperator/exist-project">
             {{row.state.data.projectName}} 
           </a> 
         </td>
       </ng-container>
-  
-    
-      <ng-container matColumnDef="projectNo">
+
+      <!-- Project Number -->
+      <ng-container matColumnDef="projectNumber">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Project No. </th>
         <td mat-cell *matCellDef="let row"> {{row.state.data.UICProjectNumber}} </td>
       </ng-container>
-  
+
+      <!-- Project Status -->
       <ng-container matColumnDef="projectStatus">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Status </th>
         <td mat-cell *matCellDef="let row"> {{row.state.data.status}} </td>

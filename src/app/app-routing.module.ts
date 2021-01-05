@@ -13,6 +13,7 @@ import { CreateWellComponent } from './welloperator/create-well/create-well.comp
 import { AddRemoveProjectWellsComponent } from './welloperator/add-remove-project-wells/add-remove-project-wells.component';
 import { ProjectConfirmComponent } from './welloperator/project-confirm/project-confirm.component';
 import { NewProjectComponent } from './welloperator/new-project/new-project.component';
+import { ExistingProjectComponent } from './welloperator/existing-project/existing-project.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -32,7 +33,8 @@ const routes: Routes = [
         { path: 'propose-wells', component: ProposeWellsComponent },
         { path: 'edit-project', component: AddRemoveProjectWellsComponent },
         { path: 'project-confirm', component: ProjectConfirmComponent },
-        { path: 'new-project', component: NewProjectComponent }
+        { path: 'new-project', component: NewProjectComponent },
+        { path: 'exist-project', component: ExistingProjectComponent },
       ]
   }];
 

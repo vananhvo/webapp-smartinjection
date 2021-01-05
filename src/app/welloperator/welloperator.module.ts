@@ -30,6 +30,7 @@ import { ProjectConfirmComponent } from './project-confirm/project-confirm.compo
 import { NewProjectComponent } from './new-project/new-project.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ExistingProjectComponent } from './existing-project/existing-project.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -40,6 +41,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     WoDashboardComponent, 
     CreateWellComponent, 
     MyWellsComponent, 
+    ExistingProjectComponent, 
     ProposeWellsComponent,
     AddRemoveProjectWellsComponent, 
     ProjectConfirmComponent, 

@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
-import {OperatorDashboardService} from './wo-dashboard.service';
 import { DefaultService } from '../../default.service';
 
 export interface myProject {
@@ -18,7 +17,13 @@ export interface myProject {
 export class WoDashboardComponent implements AfterViewInit {
   pageTitle = "Well Operator Dashboard";
   dataSource;
-
+  
+  displayedColumns: string[] = [
+    'projectName',
+    'projectNumber',
+    'projectStatus'
+  ];
+  
   ngOnInit(): void {
     this.defaultService.getProjects().subscribe(value => {
       console.log(value);
@@ -26,11 +31,6 @@ export class WoDashboardComponent implements AfterViewInit {
     })
   }
 
-  displayedColumns: string[] = [
-    'projectName',
-    'projectNo',
-    'projectStatus'
-  ];
   // dataSource = new MatTableDataSource(WELL_DATA);
 
 

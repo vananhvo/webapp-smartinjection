@@ -11,13 +11,15 @@ import { DefaultService } from 'src/app/default.service';
 })
 export class NewProjectComponent implements OnInit {
 
-  isLinear = false;
+  isLinear = true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   name: string;
   result;
 
-  constructor(private defaultService: DefaultService) { }
+  constructor(
+    private defaultService: DefaultService
+  ) { }
 
   ngOnInit(): void {
   }
