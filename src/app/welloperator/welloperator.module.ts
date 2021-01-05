@@ -30,6 +30,8 @@ import { ProjectConfirmComponent } from './project-confirm/project-confirm.compo
 import { NewProjectComponent } from './new-project/new-project.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -38,7 +40,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     WoDashboardComponent, 
     CreateWellComponent, 
     MyWellsComponent, 
-    ProposeWellsComponent, AddRemoveProjectWellsComponent, ProjectConfirmComponent, NewProjectComponent, 
+    ProposeWellsComponent,
+    AddRemoveProjectWellsComponent, 
+    ProjectConfirmComponent, 
+    NewProjectComponent, 
+    ConfirmDialogComponent, 
   ],
   imports: [
     CommonModule,
@@ -65,7 +71,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     FlexLayoutModule,
     MatStepperModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule,
+  ],
+  entryComponents: [
+    ConfirmDialogComponent
   ]
 })
 export class WelloperatorModule { }
