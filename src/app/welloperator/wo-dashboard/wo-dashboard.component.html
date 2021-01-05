@@ -6,61 +6,34 @@
 <h1>{{ pageTitle }}</h1>
 
 <div fxLayout="row" fxLayoutAlign="space-between-center" fxLayoutGap="10px">
-    <mat-card class="drafted-projects-card">
+    <mat-card class="projects-card">
       <mat-card-header>
         <mat-icon mat-card-avatar>edit</mat-icon>
-        <mat-card-title>Drafted Projects</mat-card-title>
-        <mat-card-subtitle>You have unsubmitted project(s).</mat-card-subtitle>
+        <mat-card-title>Projects Management</mat-card-title>
+        <mat-card-subtitle>Choose an option to manage your projects.</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content>
-        <p>Oldest Project: Shiba Inu</p>
-        <p>Created on: 12/12/20</p>
-        <p>Created by: Joe Doe</p>
-      </mat-card-content>
       <mat-card-actions>
-        <a mat-raised-button href="/welloperator/edit-project" color="warn">EDIT OLDEST DRAFT</a>
-        <button mat-raised-button color="primary">ALL DRAFTED</button>
+        <div fxLayout="column" fxLayoutGap="10px">
+        <a mat-raised-button color="accent" href="/welloperator/new-project">CREATE NEW PROJECT</a>
+        <button mat-raised-button color="primary">DRAFTED PROJECTS</button>
+        <button mat-raised-button color="primary">PENDING PROJECTS</button>
+        </div>
       </mat-card-actions>
     </mat-card>
-    <mat-card class="my-wells-card">
+    <mat-card class="wells-card">
       <mat-card-header>
         <mat-icon mat-card-avatar>star</mat-icon>
-        <mat-card-title>My Wells</mat-card-title>
-        <mat-card-subtitle>There are 30 new wells recently added.</mat-card-subtitle>
+        <mat-card-title>Wells Management</mat-card-title>
+        <mat-card-subtitle>Choose an option to manage your wells.</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content>
-        <p>Newest Well: Weiss</p>
-        <p>Part of Project: Corgi</p>
-        <p>Created by: Alex Smith</p>
-      </mat-card-content>
       <mat-card-actions>
-        <a mat-raised-button href="/welloperator/propose-wells" color="accent">PROPOSE WELLS</a>
-        <a mat-raised-button href="/welloperator/my-wells" color="primary">ALL WELLS</a>
+        <div fxLayout="column" fxLayoutGap="10px">
+        <a mat-raised-button href="/welloperator/create-well" color="accent">CREATE NEW WELL</a>
+        <a mat-raised-button href="/welloperator/propose-wells" color="primary">PROPOSE WELLS</a>
+        <a mat-raised-button href="/welloperator/my-wells" color="primary">MY WELLS</a>
+        </div>
       </mat-card-actions>
     </mat-card>
-    <mat-card class="create-card">
-      <mat-card-header>
-      <mat-icon mat-card-avatar>library_add</mat-icon>
-      <mat-card-title>Create</mat-card-title>
-      <mat-card-subtitle>Choose an option.</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>Create a new project to add wells.</p>
-      <a mat-raised-button color="accent" href="/welloperator/new-project">CREATE NEW PROJECT</a>
-      <p>Create a new well to add into a project</p>
-      <a mat-raised-button href="/welloperator/create-well" color="accent">CREATE WELLS</a>
-    </mat-card-content>
-  </mat-card>
-  <mat-card class="pending-projects-cards">
-    <mat-card-header>
-    <mat-icon mat-card-avatar>query_builder</mat-icon>
-    <mat-card-title>Pending Projects</mat-card-title>
-    <mat-card-subtitle>3 projects are waiting for calGEM.</mat-card-subtitle>
-  </mat-card-header>
-    <mat-card-actions>
-      <button mat-raised-button color="primary">ALL PENDING PROJECTS</button>
-    </mat-card-actions>
-  </mat-card>
 </div>
 
 <br>
