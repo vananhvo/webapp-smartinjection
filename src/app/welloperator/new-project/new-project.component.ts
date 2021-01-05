@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn, Validators
 import { DefaultService } from 'src/app/default.service';
 
 
+
 @Component({
   selector: 'app-new-project',
   templateUrl: './new-project.component.html',
@@ -34,5 +35,4 @@ export class NewProjectComponent implements OnInit {
     console.log(this.result);
 
   }
-
 }
