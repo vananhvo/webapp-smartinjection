@@ -19,7 +19,7 @@
                             <input matInput ngModel name="projectName" #projectName="ngModel" id="projectName" required>
                         </mat-form-field>
                         <br>
-                        <button mat-button type="submit" >Create Project</button>
+                        <button mat-raised-button type="submit" color="primary">Create Project</button>
                     </form>
                     <br>
                     <mat-divider></mat-divider>
@@ -33,7 +33,7 @@
             **-- Adding and Removing Wells --**
         -->
         <mat-step [stepControl]="secondFormGroup">
-            <ng-template matStepLabel>Reviewing the List of Wells</ng-template>
+            <ng-template matStepLabel>Add/Remove Wells into the Project</ng-template>
             <app-add-remove-project-wells></app-add-remove-project-wells>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
@@ -45,11 +45,22 @@
             **-- Confirmation + Send to Regulatory Project --**
          -->
         <mat-step>
-            <ng-template matStepLabel>Confirmation</ng-template>
+            <ng-template matStepLabel>Overview</ng-template>
             <app-project-confirm></app-project-confirm>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
-                <button mat-button (click)="stepper.reset()">Submit</button>
+                <button mat-button matStepperNext>New Step</button>
+            </div>
+        </mat-step>
+        
+        <mat-step>
+            <ng-template matStepLabel>Confirmation</ng-template>
+            <p>Do you want to submit this project?</p>
+            <p style="font-size:14px; color:#f30000; font-weight:bold;">
+                You are responsible for any data entry error after this point. </p>
+            <div>
+                <button mat-button matStepperPrevious>No, Go back</button>
+                <button mat-raised-button (click)="stepper.reset()" color="primary">Yes, Submit this project</button>
             </div>
         </mat-step>
     </mat-horizontal-stepper>
