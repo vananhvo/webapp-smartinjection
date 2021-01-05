@@ -4,6 +4,8 @@ import { FormBuilder, NgForm } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WelloperatorService } from '../welloperator.service';
+import { MatDialog} from '@angular/material/dialog';
+import { ConfirmDialogComponent } from 'src/app/welloperator/confirm-dialog/confirm-dialog.component';
 
 
 @Component({
@@ -21,7 +23,8 @@ export class CreateWellComponent implements OnInit{
   constructor(
     private route:ActivatedRoute,
     private router:Router,
-    private wellOperatorService : WelloperatorService
+    private wellOperatorService : WelloperatorService,
+    private dialog: MatDialog
   ){}
 
   ngOnInit(): void {
@@ -72,6 +75,21 @@ export class CreateWellComponent implements OnInit{
 
   uploadFile() {
     //
+  }
+
+  openConfirmDialog() {
+    const confirmDialog = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        title: 'Confirm Well Submission',
+        message: "Are you sure, you want to submit this well?"
+      }
+    });
+
+    confirmDialog.afterClosed().subscribe(result => {
+      if (result === true) {
+      console.log(`Dialog result: ${result}`);
+      }
+    });
   }
 
 }
