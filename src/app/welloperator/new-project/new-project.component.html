@@ -6,9 +6,8 @@
         <!-- Step One  
             **-- Project Name Input -- **
         -->
-        <div>
-
-            <mat-step [stepControl]="firstFormGroup">
+        <mat-step [stepControl]="firstFormGroup">
+                <div>
                 <ng-template matStepLabel>Project Name</ng-template>
                 <div class="projectForm">
                     <p>
@@ -17,15 +16,18 @@
                     <form #projectName="ngForm" (ngSubmit)="submitProjectName(projectName)">
                         <mat-form-field>
                             <mat-label>Give A Project Name</mat-label>
-                            <input matInput ngModel name="projectName" #projectName="ngModel" id="projectName">
+                            <input matInput ngModel name="projectName" #projectName="ngModel" id="projectName" required>
                         </mat-form-field>
                         <br>
-                        <button mat-button type="submit" matStepperNext>Create Project</button>
+                        <button mat-button type="submit" >Create Project</button>
                     </form>
+                    <br>
+                    <mat-divider></mat-divider>
+                    <button mat-button matStepperNext>Next Step</button>
                 </div>
                 
+            </div>
             </mat-step>
-        </div>
 
         <!-- Step Two  
             **-- Adding and Removing Wells --**

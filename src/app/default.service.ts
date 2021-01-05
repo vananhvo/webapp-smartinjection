@@ -27,8 +27,9 @@ export class DefaultService {
   }
 
   createProject(formData: FormData) {
-    return this.http.post(this.createProjectURL, formData, {headers: this.headers, responseType: 'text'});
+    console.log('in createProject');
 
+    return this.http.post(this.createProjectURL, formData, {headers: this.headers, responseType: 'text'});
   }
 
 
