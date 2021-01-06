@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import {map} from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,21 @@ export class DefaultService {
 
   constructor(private http: HttpClient) {
   }
+
+  // New Project
+  private newProject = new BehaviorSubject<any>({
+    newProjectName: 'Kevin'
+
+  });
+
+  setNewProjectName(project: any) {
+    this.newProject.next(project);
+  }
+
+  getProjectName() {
+    return this.newProject.asObservable();
+  }
+
 
   getWells() {
     console.log('in getWells');

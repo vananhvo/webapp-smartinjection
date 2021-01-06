@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import { DefaultService } from 'src/app/default.service';
 
 @Component({
   selector: 'app-project-confirm',
@@ -21,10 +22,15 @@ export class ProjectConfirmComponent implements OnInit {
   columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
   expandedElement: PeriodicElement | null;
   
+  // **--- For Project Name ---**
+  updateProjectName: any;
 
-  constructor() { }
+  constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {
+    this.defaultService.getProjectName().subscribe(name => {
+      this.updateProjectName = name;
+    })
   }
 
 }
