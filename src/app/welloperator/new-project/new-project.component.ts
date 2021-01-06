@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn, Validators, NgForm } from '@angular/forms';
 import { DefaultService } from 'src/app/default.service';
 
@@ -16,12 +16,19 @@ export class NewProjectComponent implements OnInit {
   secondFormGroup: FormGroup;
   name: string;
   result;
+  
+  //-- Passing Project Name --
+  pName: string;
 
-  constructor(
-    private defaultService: DefaultService
-  ) { }
+  constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {
+  }
+
+  submitBtn() {
+    this.defaultService.setNewProjectName({
+      pName: this.pName
+    });
   }
 
   submitProjectName(projectName: NgForm) {
