@@ -2,6 +2,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { DefaultService } from 'src/app/default.service';
 
 // **--- For Added Wells Table ---**
 export interface WellInformation {
@@ -64,6 +65,9 @@ export class AddRemoveProjectWellsComponent implements OnInit {
   dataSource2 = new MatTableDataSource<CreatedWell>(ELEMENT_DATA);
   selection = new SelectionModel<CreatedWell>(true, []);
   
+  // **--- For Project Name ---**
+  updateProjectName: any;
+
   // **--- For Project Information ---**
   owner = "John Smith";
   projectDate = "12/12/20";
@@ -87,10 +91,13 @@ export class AddRemoveProjectWellsComponent implements OnInit {
 
   
 
-  constructor() { }
+  constructor(private defaultService: DefaultService) { }
 
   ngOnInit(): void {
     this.dataSource2.sort = this.sort;
+    this.defaultService.getProjectName().subscribe(name => {
+      this.updateProjectName = name;
+    })
   }
 
 

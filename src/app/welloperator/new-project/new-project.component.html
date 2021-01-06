@@ -10,20 +10,33 @@
                 <div>
                 <ng-template matStepLabel>Project Name</ng-template>
                 <div class="projectForm">
-                    <p>
-                        This is where instructions will go
-                    </p>
+                    <div>
                     <form #projectName="ngForm" (ngSubmit)="submitProjectName(projectName)">
                         <mat-form-field>
-                            <mat-label>Give A Project Name</mat-label>
-                            <input matInput ngModel name="projectName" #projectName="ngModel" id="projectName" required>
+                            <mat-label>Enter Project Name</mat-label>      
+                            <div class="name">
+                                <input matInput 
+                                placeholder="Project Name" 
+                                name="projectName"
+                                [(ngModel)]="pName"
+                                ngModel name="projectName"
+                                #projectName="ngModel"
+                                id="projectName"
+                                required>
+                            </div>           
+                            <!--
+                            <input matInput ngModel name="projectName" #projectName="ngModel" 
+                            id="projectName" name="projectName" required>
+                            -->
                         </mat-form-field>
                         <br>
-                        <button mat-button type="submit" >Create Project</button>
+                        <button mat-raised-button type="submit" color="primary">
+                            Create Project</button>
                     </form>
+                    </div>
                     <br>
                     <mat-divider></mat-divider>
-                    <button mat-button matStepperNext>Next Step</button>
+                    <button mat-button matStepperNext class="submitBtn" (click)="submitBtn()">Next Step</button>
                 </div>
                 
             </div>
@@ -33,7 +46,7 @@
             **-- Adding and Removing Wells --**
         -->
         <mat-step [stepControl]="secondFormGroup">
-            <ng-template matStepLabel>Reviewing the List of Wells</ng-template>
+            <ng-template matStepLabel>Add/Remove Wells into the Project</ng-template>
             <app-add-remove-project-wells></app-add-remove-project-wells>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
@@ -45,11 +58,22 @@
             **-- Confirmation + Send to Regulatory Project --**
          -->
         <mat-step>
-            <ng-template matStepLabel>Confirmation</ng-template>
+            <ng-template matStepLabel>Overview</ng-template>
             <app-project-confirm></app-project-confirm>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
-                <button mat-button (click)="stepper.reset()">Submit</button>
+                <button mat-button matStepperNext>New Step</button>
+            </div>
+        </mat-step>
+        
+        <mat-step>
+            <ng-template matStepLabel>Confirmation</ng-template>
+            <p>Do you want to submit this project?</p>
+            <p style="font-size:14px; color:#f30000; font-weight:bold;">
+                You are responsible for any data entry error after this point. </p>
+            <div>
+                <button mat-button matStepperPrevious>No, Go back</button>
+                <a mat-raised-button href="/welloperator/" color="primary">Yes, Submit this project</a>
             </div>
         </mat-step>
     </mat-horizontal-stepper>
