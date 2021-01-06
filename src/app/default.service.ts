@@ -19,8 +19,10 @@ export class DefaultService {
 
   // New Project
   private newProject = new BehaviorSubject<any>({
-    newProjectName: 'Kevin'
-
+    newProjectName: 'Kevin' 
+  });
+  private existProjectName = new BehaviorSubject<any>({
+    existProjectName: 'Error Name Not Found'
   });
 
   setNewProjectName(project: any) {
@@ -47,6 +49,20 @@ export class DefaultService {
 
     return this.http.post(this.createProjectURL, formData, {headers: this.headers, responseType: 'text'});
   }
+  
+  setProjectName(projectName: any){
+    console.log("setProjectName");
+    console.log(projectName);
+    this.existProjectName.next(projectName);
+    console.log(this.existProjectName);
+  }
+
+  getProjectNameDash() {
+    console.log("getProjectNameDash");
+    console.log(this.existProjectName.asObservable());
+    return this.existProjectName.asObservable();
+  }
+  
 
 
 }

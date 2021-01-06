@@ -33,6 +33,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ExistingProjectComponent } from './existing-project/existing-project.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AddRemoveWellTableComponent } from './add-remove-well-table/add-remove-well-table.component';
+import { ExistingProjectOverviewComponent } from './existing-project-overview/existing-project-overview.component';
 
 
 
@@ -46,7 +48,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     AddRemoveProjectWellsComponent, 
     ProjectConfirmComponent, 
     NewProjectComponent, 
-    ConfirmDialogComponent, 
+    ConfirmDialogComponent, AddRemoveWellTableComponent, ExistingProjectOverviewComponent, 
   ],
   imports: [
     CommonModule,

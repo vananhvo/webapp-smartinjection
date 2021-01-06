@@ -17,6 +17,8 @@ export interface myProject {
 export class WoDashboardComponent implements AfterViewInit {
   pageTitle = "Well Operator Dashboard";
   dataSource;
+  projectName;
+  pName;
   
   displayedColumns: string[] = [
     'projectName',
@@ -26,10 +28,15 @@ export class WoDashboardComponent implements AfterViewInit {
   
   ngOnInit(): void {
     this.defaultService.getProjects().subscribe(value => {
+      console.log("Value: ");
       console.log(value);
+      console.log(value[1].state.data.projectName);
+      console.log(value[1].state.data.linearId.id);
+      this.projectName = value[1].state.data.projectName;
       this.dataSource = new MatTableDataSource(<any> value);
     })
   }
+
 
   // dataSource = new MatTableDataSource(WELL_DATA);
 
@@ -46,7 +53,15 @@ export class WoDashboardComponent implements AfterViewInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
-    
+  }
+
+  passProjectName(rowNum : any) {
+    console.log("getName funct");
+    console.log(rowNum);
+    console.log(rowNum.state.data.projectName);
+    this.defaultService.setProjectName({
+      pName:  rowNum.state.data.projectName
+    });
   }
 }
 

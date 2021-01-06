@@ -14,6 +14,8 @@ import { AddRemoveProjectWellsComponent } from './welloperator/add-remove-projec
 import { ProjectConfirmComponent } from './welloperator/project-confirm/project-confirm.component';
 import { NewProjectComponent } from './welloperator/new-project/new-project.component';
 import { ExistingProjectComponent } from './welloperator/existing-project/existing-project.component';
+import { AddRemoveWellTableComponent } from './welloperator/add-remove-well-table/add-remove-well-table.component';
+import { ExistingProjectOverviewComponent } from './welloperator/existing-project-overview/existing-project-overview.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -35,6 +37,8 @@ const routes: Routes = [
         { path: 'project-confirm', component: ProjectConfirmComponent },
         { path: 'new-project', component: NewProjectComponent },
         { path: 'exist-project', component: ExistingProjectComponent },
+        { path: 'add-remove-table', component: AddRemoveWellTableComponent },      
+        { path: 'existing-project-overview', component: ExistingProjectOverviewComponent }
       ]
   }];
 
